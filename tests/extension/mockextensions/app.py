@@ -72,7 +72,7 @@ class MockExtensionApp(ExtensionAppJinjaMixin, ExtensionApp):
         self.handlers.append(("/mock_template", MockExtensionTemplateHandler))
         self.loaded = True
 
-    async def start_extension(self):
+    async def _start_jupyter_server_extension(self, serverapp):
         self.started = True
 
 
